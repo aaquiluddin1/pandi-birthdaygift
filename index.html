@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 🎉</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+
+    .container{
+      width:100%;
+      max-width:420px;
+      background:rgba(255,255,255,0.15);
+      backdrop-filter:blur(12px);
+      border-radius:25px;
+      padding:25px;
+      color:white;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      position:relative;
+      overflow:visible;
+      margin:20px 0;
+    }
+
+    .slide{
+      display:none;
+      animation:fade 0.6s ease;
+    }
+
+    .slide.active{
+      display:block;
+    }
+
+    h1{
+      font-size:2rem;
+      margin-bottom:12px;
+      animation:bounce 2s infinite;
+    }
+
+    .subtitle{
+      font-size:1rem;
+      margin-bottom:18px;
+    }
+
+    .birthday-img{
+      width:100%;
+      max-height:500px;
+      object-fit:contain;
+      border-radius:20px;
+      border:4px solid rgba(255,255,255,0.35);
+      margin-bottom:18px;
+      background:rgba(255,255,255,0.1);
+    }
+
+    .wish-box{
+      background:rgba(255,255,255,0.16);
+      padding:18px;
+      border-radius:18px;
+      line-height:1.7;
+      font-size:0.95rem;
+    }
+
+    .btn-group{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      background:white;
+      color:#ff4b91;
+      border:none;
+      padding:12px 22px;
+      border-radius:30px;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      background:#ffe4f0;
+    }
+
+    .surprise-text{
+      font-size:1.8rem;
+      font-weight:700;
+      color:#fff700;
+      margin-top:12px;
+      text-shadow:2px 2px 8px rgba(0,0,0,0.4);
+      animation:shake 1s infinite;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateX(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    @keyframes bounce{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-7px);
+      }
+    }
+
+    @keyframes shake{
+      0%{transform:rotate(0deg);}
+      25%{transform:rotate(2deg);}
+      50%{transform:rotate(0deg);}
+      75%{transform:rotate(-2deg);}
+      100%{transform:rotate(0deg);}
+    }
+
+    @media(max-width:480px){
+
+      h1{
+        font-size:1.7rem;
+      }
+
+      .wish-box{
+        font-size:0.9rem;
+      }
+
+      .surprise-text{
+        font-size:1.4rem;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- SLIDE 1 -->
+    <div class="slide active">
+
+      <h1>🎂 Happy Birthday potti 🎉</h1>
+
+      <p class="subtitle">
+        Wishing you happiness(V), love(V) & endless success(V) 💖
+      </p>
+
+      <img src="cha.jpg"
+           alt="Birthday"
+           class="birthday-img">
+
+      <div class="wish-box">
+        Another year older AUNTY 😂<br><br>
+
+        Hope you have a really good day and that this year goes well for you.
+        Thanks for being a good friend and for all the random funny conversations.<br><br>
+
+        Stay happy, enjoy your day, and don’t eat all the cake alone,
+        makosam koncham unchu 🎂😂
+      </div>
+
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+
+      <h1>📸my small friend</h1>
+
+      <img src="friends.png"
+           alt="Friends"
+           class="birthday-img">
+
+      <div class="wish-box">
+        Every random conversation with you somehow becomes funny 😂<br><br>
+
+        Thanks for all the memories, laughs and chaotic moments.
+        Life would honestly be less entertaining without your drama 😌✨
+      </div>
+
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+
+      <h1>🌟family</h1>
+
+      <img src="memory.jpg"
+           alt="Memory"
+           class="birthday-img">
+
+      <div class="wish-box">
+        Stay happy with your family, keep making small memories together,
+        laughing over silly things, and enjoying the little moments in life ❤️<br><br>
+
+        No matter how busy life gets, I hope you always have people around you
+        who make you feel loved, comfortable and truly at home ✨
+      </div>
+
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide">
+
+      <h1>🎊 Birthday Queen</h1>
+
+      <img src="party.jpg"
+           alt="Party"
+           class="birthday-img">
+
+      <div class="wish-box">
+        Today is officially YOUR day 🥳<br><br>
+
+        Eat cake, take pictures, enjoy gifts and act important
+        for one full day 😌✨
+      </div>
+
+    </div>
+
+    <!-- SURPRISE SLIDE -->
+    <div class="slide">
+
+      <h1>🐵 Special Surprise</h1>
+
+      <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9"
+           alt="Monkey"
+           class="birthday-img">
+
+      <div class="surprise-text">
+        😂 actual image of you KOTI 😂
+      </div>
+
+    </div>
+
+    <!-- NORMAL BUTTONS -->
+    <div class="btn-group" id="normalButtons">
+
+      <button class="btn" onclick="prevSlide()">
+        ⬅ Back
+      </button>
+
+      <button class="btn" onclick="nextSlide()">
+        Next ➡
+      </button>
+
+    </div>
+
+    <!-- SURPRISE BUTTON -->
+    <div class="btn-group" id="surpriseButton" style="display:none;">
+
+      <button class="btn" onclick="showSurprise()">
+        🎁 Special Surprise
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    let slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    const normalButtons = document.getElementById("normalButtons");
+    const surpriseButton = document.getElementById("surpriseButton");
+
+    function showSlide(index){
+
+  slides.forEach(slide => {
+    slide.classList.remove("active");
+  });
+
+  slides[index].classList.add("active");
+
+  // FIRST SLIDE -> only NEXT button
+  if(index === 0){
+
+    normalButtons.innerHTML = `
+      <button class="btn" onclick="nextSlide()">
+        Next ➡
+      </button>
+    `;
+
+    surpriseButton.style.display = "none";
+    normalButtons.style.display = "flex";
+  }
+
+  // 4TH SLIDE -> special surprise button
+  else if(index === 3){
+
+    normalButtons.style.display = "none";
+    surpriseButton.style.display = "flex";
+  }
+
+  // MONKEY SURPRISE SLIDE -> no buttons
+  else if(index === 4){
+
+    normalButtons.style.display = "none";
+    surpriseButton.style.display = "none";
+  }
+
+  // MIDDLE SLIDES -> back + next
+  else{
+
+    normalButtons.innerHTML = `
+      <button class="btn" onclick="prevSlide()">
+        ⬅ Back
+      </button>
+
+      <button class="btn" onclick="nextSlide()">
+        Next ➡
+      </button>
+    `;
+
+    normalButtons.style.display = "flex";
+    surpriseButton.style.display = "none";
+  }
+
+  // Scroll top on slide change
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+  confetti({
+    particleCount:70,
+    spread:80,
+    origin:{ y:0.7 }
+  });
+
+}
+    function nextSlide(){
+
+      currentSlide++;
+
+      if(currentSlide > 3){
+        currentSlide = 3;
+      }
+
+      showSlide(currentSlide);
+
+    }
+
+    function prevSlide(){
+
+      currentSlide--;
+
+      if(currentSlide < 0){
+        currentSlide = 0;
+      }
+
+      showSlide(currentSlide);
+
+    }
+
+    function showSurprise(){
+
+      currentSlide = 4;
+
+      showSlide(currentSlide);
+
+      confetti({
+        particleCount:220,
+        spread:140,
+        origin:{ y:0.6 }
+      });
+
+    }
+
+    // Starting confetti
+    window.onload = () => {
+
+      confetti({
+        particleCount:150,
+        spread:100,
+        origin:{ y:0.6 }
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
